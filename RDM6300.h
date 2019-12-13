@@ -1,6 +1,7 @@
 /*
  * @file    RDM6300.h
  * @author  Arliones Hoeller Jr.
+ * @edited  Thales Maia
  * @license MIT (see LICENSE)
  * 
  */
@@ -26,9 +27,19 @@ public:
   {
     _serial->end();
   }
+  void listen()
+  {
+      _serial->listen();
+  }
+
+  bool available()
+  {
+      return _serial->available();
+  }
 
   unsigned long long read()
   {
+
     while(!_id_is_valid) {
       while(_serial->available() > 0)
       {
@@ -140,4 +151,3 @@ private:
 };
 
 #endif /* __RDM6300_H__ */
-
