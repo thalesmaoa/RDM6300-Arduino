@@ -5,7 +5,7 @@ I did a small modification so I can connect two RDM6300 to the same arduino.
 
 Exemple:
 
-´´´
+```
 #include <SoftwareSerial.h>
 #include "RDM6300.h"
 
@@ -97,4 +97,4 @@ void loop()
 
 
 }
-´´´
+```
